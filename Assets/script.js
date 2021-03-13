@@ -31,11 +31,11 @@ function timeBlockColor() {
     }
 
     if (currentHour > 12) {
-        $("#hour-13").addClass("past");
+        $("#hour-12").addClass("past");
     } else if (currentHour >= 12 && currentHour < 13){
-        $("#hour-13").addClass("present");
+        $("#hour-12").addClass("present");
     } else if (currentHour < 12) {
-        $("#hour-13").addClass("future");
+        $("#hour-12").addClass("future");
     }
 
     if (currentHour > 13) {
@@ -50,7 +50,7 @@ function timeBlockColor() {
         $("#hour-14").addClass("past");
     } else if (currentHour >= 14 && currentHour < 15){
         $("#hour-14").addClass("present");
-    } else if (currentHour < 14 {
+    } else if (currentHour < 14) {
         $("#hour-14").addClass("future");
     }
 
@@ -78,3 +78,17 @@ function timeBlockColor() {
         $("#hour-17").addClass("future");
     }
 }
+
+$(document).ready(function(){
+    timeBlockColor();
+
+    // listening for the save button to be clicked
+    $(".saveBtn").on("click", function() {
+        // getting values of the .description
+        var hourlyPlan = $(this).siblings(".description").value();
+        var time = $(this).parent().attr("id");
+
+        // saving values into local storage
+        localStorage.setItem(time, hourlyPlan);
+    })
+})
