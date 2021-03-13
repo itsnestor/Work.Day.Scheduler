@@ -85,10 +85,21 @@ $(document).ready(function(){
     // listening for the save button to be clicked
     $(".saveBtn").on("click", function() {
         // getting values of the .description
-        var hourlyPlan = $(this).siblings(".description").value();
+        var hourlyPlan = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
 
         // saving values into local storage
         localStorage.setItem(time, hourlyPlan);
     })
-})
+
+    // gets values from local storage
+    $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+    $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+    $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+    $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+    $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+    $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+    $("#hour-6 .description").val(localStorage.getItem("hour-16"));
+    $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+});
