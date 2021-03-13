@@ -102,4 +102,7 @@ $(document).ready(function(){
     $("#hour-15 .description").val(localStorage.getItem("hour-15"));
     $("#hour-6 .description").val(localStorage.getItem("hour-16"));
     $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+
+    // updates the function every second
+    setInterval(timeBlockColor, 1000);
 });
