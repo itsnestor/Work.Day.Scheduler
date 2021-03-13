@@ -5,4 +5,4 @@ I created a work day scheduler. When you open the website, the header includes t
 
 ![website image](Assets/05-third-party-apis-homework-demo.gif)
 
-### ![Website Link](https://itsnestor.github.io/Work.Day.Scheduler/)
+### [Website Link](https://itsnestor.github.io/Work.Day.Scheduler/)
